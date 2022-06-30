@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1,
+h2,
+h3{
+    margin: 10px auto;
+}
+.employeeName{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.employeeSuggestion{
+    font-style: italic;
+}
+
+.hrbox{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.body{
+    background-color: gray;
+}
+.navbar{
+    background-color: gray;
+}
+.header,
+.section-1,
+.section-2{
+    padding: 10px 0;
+    background-color: #fff;
+    overflow: auto;
+}
+.footer{
+    margin-top: 10px;
+    background-color: gray;
+}
+.footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-2{
+    margin-left: 15px;
+    margin-right: 15px;
+}

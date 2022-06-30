@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Human Resources Suggestion Box</h1>  
+    </nav>
+    
+
+    <!-- Header -->
+    <header class="header">
+              
+        <img class="hrbox" src="images/hrbox.png" alt="">
+    </header>
+
+    <!-- Section-1 -->
+    <section class="section-1">
+        <ul class="employees">
+            <% for(let i=0; i < info.length; i++) {%>
+                <li class="employee">
+                    <span class="employeeName"><%= info[i].employeeName %></span>
+                    <span class="employeeSuggestion"><%= info[i].employeeSuggestion %></span>
+                    <span><%= info[i].likes %></span>
+                    <!-- <img class="gabi"src="images/gabi.png" alt=""> -->
+                    <span class='fa fa-thumbs-up'></span>
+                    <span class='fa fa-trash'></span>
+                </li>
+            <% } %>
+        </ul>
+    </section>
+    
+    <!-- Section-2 -->
+    <section class="section-2">
+        <h2>Add A Suggestion:</h2>
+        <h3>If you would like to remain anonymous, do not enter your name.</h3>
+
+        <form action="/addEmployee" method="POST">
+            <input type="text" placeholder="Employee Name" name="employeeName">
+            <input type="text" placeholder="Employee Suggestion" name="employeeSuggestion">
+            <input type="submit">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="box-1">
+                <h6>Copyright &copy; 2022</h6>                                   
+            </div>
+            <div class="box-2">
+                <h6>1234 StreetName </br>City, State Zipcode</h6>
+
+            </div>
+            <div class="box-3">
+                <a href="https://github.com/KevinTapol"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-tapolcsanyi-546582239/"><i class="fab fa-linkedin-in"></i></a>
+                <!-- <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+        </div>
+    </footer>
+    
+    <script src='js/main.js'></script>
+</body>
+</html>
