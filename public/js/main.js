@@ -17,10 +17,10 @@ async function deleteEmployee(){
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              'employeeNameS': eName,
-              'employeeSuggestionS': eSuggestion
+                'employeeNameS': eName,
+                'employeeSuggestionS': eSuggestion
             })
-          })
+        })
         const data = await response.json()
         console.log(data)
         location.reload()
@@ -39,11 +39,11 @@ async function addLike(){
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              'employeeNameS': eName,
-              'employeeSuggestionS': eSuggestion,
-              'likesS': tLikes
+                'employeeNameS': eName,
+                'employeeSuggestionS': eSuggestion,
+                'likesS': tLikes
             })
-          })
+        })
         const data = await response.json()
         console.log(data)
         location.reload()
