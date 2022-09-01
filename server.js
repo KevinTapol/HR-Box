@@ -39,7 +39,7 @@ app.post('/addEmployee', (request, response) => { // starts a POST method when t
     db.collection('employees').insertOne({employeeName: request.body.employeeName, 
     employeeSuggestion: request.body.employeeSuggestion, likes: 0}) // inserts a new employee suggestion into the employee collection and gives it a likes value by default of 0
     .then(result => { // if insert is succesfull...
-        console.log('Employee Suggestion Added') //console log the success string
+        console.log(`Employee Suggestion ${request.body.employeeSuggestion} Added`) //console log the success string by suggestion
         response.redirect('/') // redirect back to the homepage
     }) // close the success promise
     .catch(error => console.error(error)) // if the promise is rejected console log the error
@@ -56,7 +56,7 @@ app.put('/addOneLike', (request, response) => { // starts a PUT method when the 
         upsert: true // inserts item regardless if it already exists (normally upsert: false is used to prevent insertion if the item does not already exist)
     })
     .then(result => { // if promise is successful...
-        console.log('Added One Like') // console log added like
+        console.log(`Added One Like to ${request.body.employeeSuggestionS}`) // console log added like clicked on by suggestion
         response.json('Like Added') // send a response back to the sender
     }) // close the success promise
     .catch(error => console.error(error)) // if the promise fails, console log the error
@@ -64,9 +64,9 @@ app.put('/addOneLike', (request, response) => { // starts a PUT method when the 
 
 // Delete method for employee suggestion
 app.delete('/deleteEmployee', (request, response) => { // starts a delete method when the delete route is passed in
-    db.collection('employees').deleteOne({employeeName: request.body.employeeNameS}) // look inside the employee collection
+    db.collection('employees').deleteOne({employeeName: request.body.employeeNameS, employeeSuggestion: request.body.employeeSuggestionS}) // look inside the employee collection
     .then(result => { // if the promise is successful...
-        console.log('Employee Deleted') // console log successful deletion
+        console.log(`Employee Suggestion From Deleted`) // console log successful deletion by employee name
         response.json('Employee Deleted') // send a response back to the sender
     }) // close the success promise
     .catch(error => console.error(error)) // console log the promise fail error
