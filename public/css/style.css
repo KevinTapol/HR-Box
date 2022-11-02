@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+a:hover {
+    color: purple;
+}
+
 h1,
 h2,
 h3{
@@ -53,3 +57,4 @@ h3{
 #liIcon{
     min-height: 300px;
 }
+   
