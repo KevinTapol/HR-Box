@@ -13,7 +13,7 @@ require('dotenv').config() //allows us to look for variables inside of the .env 
 //const connectDB = async () => {
 //    try {
 //        const conn = await mongoose.connect(
-//            process.env.DB_CONNECTION
+//            process.env.DB_STRING
 //        )
 //        console.log(`MongoDB connected: ${conn.connection.host}`)
 //    } catch (error) {
